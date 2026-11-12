@@ -16,6 +16,7 @@ namespace TrainingBasics.Day7.Problem2
 
         public override void DisplayInfo()
         {
+
             base.DisplayInfo();
             Console.WriteLine($"Window Type: {WindowType}\n");
         }
