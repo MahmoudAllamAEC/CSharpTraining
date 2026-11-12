@@ -1,0 +1,133 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# Dar Al-Handasah C# Coding Standards
+
+root = true
+
+# All files
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# C# files
+[*.cs]
+
+# Naming conventions
+# PascalCase for classes, methods, properties, public fields
+dotnet_naming_rule.class_rule.severity = warning
+dotnet_naming_rule.class_rule.symbols = class_symbols
+dotnet_naming_rule.class_rule.style = class_style
+dotnet_naming_symbols.class_symbols.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.class_symbols.applicable_accessibilities = public, internal, protected, protected_internal
+dotnet_naming_style.class_style.capitalization = pascal_case
+
+# PascalCase for method names
+dotnet_naming_rule.method_rule.severity = warning
+dotnet_naming_rule.method_rule.symbols = method_symbols
+dotnet_naming_rule.method_rule.style = method_style
+dotnet_naming_symbols.method_symbols.applicable_kinds = method
+dotnet_naming_symbols.method_symbols.applicable_accessibilities = public, internal, protected, protected_internal, private
+dotnet_naming_style.method_style.capitalization = pascal_case
+
+# PascalCase for properties
+dotnet_naming_rule.property_rule.severity = warning
+dotnet_naming_rule.property_rule.symbols = property_symbols
+dotnet_naming_rule.property_rule.style = property_style
+dotnet_naming_symbols.property_symbols.applicable_kinds = property
+dotnet_naming_symbols.property_symbols.applicable_accessibilities = *
+dotnet_naming_style.property_style.capitalization = pascal_case
+
+# camelCase for local variables and parameters
+dotnet_naming_rule.local_rule.severity = warning
+dotnet_naming_rule.local_rule.symbols = local_symbols
+dotnet_naming_rule.local_rule.style = local_style
+dotnet_naming_symbols.local_symbols.applicable_kinds = local, parameter
+dotnet_naming_symbols.local_symbols.applicable_accessibilities = *
+dotnet_naming_style.local_style.capitalization = camel_case
+
+# _camelCase for private fields
+dotnet_naming_rule.private_field_rule.severity = warning
+dotnet_naming_rule.private_field_rule.symbols = private_field_symbols
+dotnet_naming_rule.private_field_rule.style = private_field_style
+dotnet_naming_symbols.private_field_symbols.applicable_kinds = field
+dotnet_naming_symbols.private_field_symbols.applicable_accessibilities = private, private_protected
+dotnet_naming_style.private_field_style.capitalization = camel_case
+dotnet_naming_style.private_field_style.required_prefix = _
+
+# ALL_CAPS for constants
+dotnet_naming_rule.constant_rule.severity = warning
+dotnet_naming_rule.constant_rule.symbols = constant_symbols
+dotnet_naming_rule.constant_rule.style = constant_style
+dotnet_naming_symbols.constant_symbols.applicable_kinds = local, field, property
+dotnet_naming_symbols.constant_symbols.applicable_accessibilities = *
+dotnet_naming_symbols.constant_symbols.required_modifiers = const
+dotnet_naming_style.constant_style.capitalization = all_upper
+dotnet_naming_style.constant_style.word_separator = _
+
+# Code style
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+
+# Indentation preferences
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+
+# Wrapping preferences
+csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_blocks = true
+
+# Use string interpolation instead of concatenation
+dotnet_style_prefer_interpolated_string = true:warning
+
+# Use var keyword for obvious types
+csharp_style_var_for_built_in_types = false:silent
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:silent
+
+# Use expression bodied members
+csharp_style_expression_bodied_methods = false:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+
+# Pattern matching
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+
+# Use null coalescing
+csharp_style_throw_expression = true:suggestion
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_inferred_tuple_names = true:suggestion
+dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
+
+# Use conditional operators
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+dotnet_style_prefer_conditional_expression_over_return = true:silent
+
+# Organize usings
+dotnet_separate_import_directive_groups = false
+dotnet_sort_system_directives_first = true
+csharp_using_directive_placement = outside_namespace:suggestion
+
+# Line length
+max_line_length = 120
+
+# XML project files
+[*.{csproj,vbproj,proj,projitems,shproj}]
+indent_size = 2
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# XAML files
+[*.xaml]
+indent_size = 2
